@@ -57,6 +57,7 @@ app.use('/api/v1/protected', (req: Request, res: Response) => {
 app.get("*", async (req: Request, res: Response) => {
 	return res.sendFile(
 		path.join(__dirname, "..", uiCodePath, "index.html")
+		res.send('This is your endpoint response!');
 	);
 });
 
