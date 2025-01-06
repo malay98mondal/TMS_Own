@@ -60,6 +60,11 @@ app.get("*", async (req: Request, res: Response) => {
 	);
 });
 
+app.get('/api/endpoint', (req, res) => {
+    res.send('This is your endpoint response!');
+});
+
+
 
 app.listen(5000, () => {
   return console.log(`Express is listening at http://localhost:${port}`);
